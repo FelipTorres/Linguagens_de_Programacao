@@ -1,0 +1,14 @@
+1) Criar classe Carro;
+     Criar os atributos cor, nome.
+     Criar método andar, recebendo como parâmetro a velocidade;
+2) Criar classe Principal com método main.
+    Criar objetos carros.
+    1) 1 Palio, branco que anda a 60 km.
+           Chamar o método andar, 
+             passando a velocidade como parâmetro.
+        2) 1 Corsa, preto que anda a 70 km.
+           Chamar o método andar, 
+             passando a velocidade como parâmetro.
+        3) 1 Gol, verde que anda a 50km.
+           Chamar o método andar, 
+             passando a velocidade como parâmetro.
