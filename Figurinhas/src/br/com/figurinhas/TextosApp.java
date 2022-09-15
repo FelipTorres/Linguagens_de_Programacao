@@ -1,9 +1,8 @@
 package br.com.figurinhas;
 
 public class TextosApp {
-    public TextosApp() 
-    {
-    }
+
+    public TextosApp(){}
 
     public void  mostraMenuPrincipal ()
     {
@@ -23,5 +22,19 @@ public class TextosApp {
     public void opcaoInvalida() 
     {
         System.out.println("Opção inválida, jogador!");
+    }
+
+    public void perguntaIdadeJogador(){
+        System.out.print("Idade : ");
+    }
+
+    public void perguntaNomeJogador() {
+        System.out.print("Nome : ");
+
+    }
+
+    public void perguntaSelecaoJogador() {
+        System.out.print("Seleção : ");
+
     }
 }
