@@ -54,13 +54,16 @@ public class App {
             idade += listaFigurinhas.get(i).getIdadeJogador();
         }
 
-        idadeMedia = idade / ( listaFigurinhas.size() - 1);
+        idadeMedia = idade / (  listaFigurinhas.size());
 
         System.out.println("A copa do mundo possui média de idade + " + idadeMedia + ".");
     }
 
     private static void mostrarFigurinhas() {
-    System.out.println(listaFigurinhas);
+    
+        for (Figurinhas figurinha : listaFigurinhas) {
+                System.out.println(figurinha);
+        }
 
     }
 
@@ -69,22 +72,21 @@ public class App {
 
         System.out.print("Nome : ");
         String nomeJogador = ler.nextLine();
-        figurinha.setNomeJogador(nomeJogador);
 
         System.out.print("Idade : ");
         int idadeJogador = ler.nextInt();
-        figurinha.setIdadeJogador(idadeJogador);
         limparCacheScanner();
 
 
         System.out.print("Seleção : ");
-        String seleçãoJogador = ler.nextLine();
-        figurinha.setSeleçãoJogador(seleçãoJogador);
+        String selecaoJogador = ler.nextLine();
 
-        System.out.println("Figurinha adicionada ao album !");
-        System.out.println(figurinha);
+        figurinha = new Figurinhas(nomeJogador, idadeJogador, selecaoJogador);
 
         listaFigurinhas.add(figurinha);
+        
+        
+        System.out.println("Figurinha adicionada com Sucesso !");
 
     }
 
