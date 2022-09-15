@@ -6,7 +6,7 @@ public class TextosApp {
 
     public void  mostraMenuPrincipal ()
     {
-        System.out.print("O que você deseja fazer?\n  1 - Inserir figurinhas\n  2 - Ver figurinhas \n  3 - Ver idade média \n  4 - Sair \n   Opção Desejada -> ");
+        System.out.print("O que você deseja fazer?\n  1 - Inserir figurinhas\n  2 - Ver figurinhas \n  3 - Ver idade média \n  0 - Sair \n   Opção Desejada -> ");
     }
 
     public void boasVindas (String nomeUsuário)
@@ -24,17 +24,8 @@ public class TextosApp {
         System.out.println("Opção inválida, jogador!");
     }
 
-    public void perguntaIdadeJogador(){
-        System.out.print("Idade : ");
+    public void mostrarEncerramento() {
+        System.out.println("Programa Encerrando \n Se vemos em breve! \n tenha um ótimo dia !!");
     }
 
-    public void perguntaNomeJogador() {
-        System.out.print("Nome : ");
-
-    }
-
-    public void perguntaSelecaoJogador() {
-        System.out.print("Seleção : ");
-
-    }
 }
