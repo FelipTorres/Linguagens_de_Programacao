@@ -1,11 +1,8 @@
-package br.com.figurinhas.limpaconsole;
+
 
 import java.io.IOException;
 
 public class LimpaConsole {
-
-    public LimpaConsole() {
-    }
 
     public void Console() throws InterruptedException, IOException {
 

@@ -1,16 +1,14 @@
-package br.com.figurinhas.figurinha;
+package br.com.figurinhas;
 
-public class Figurinhas {
+public class Figurinha {
     private String nomeJogador;
     private int idadeJogador;
     private String seleçãoJogador;
 
-    public Figurinhas() 
-    {
+    public Figurinha(){
     }
 
-    public Figurinhas(String nomeJogador, int idadeJogador, String seleçãoJogador) 
-    {
+    public Figurinha(String nomeJogador, int idadeJogador, String seleçãoJogador) {
         this.nomeJogador = nomeJogador;
         this.idadeJogador = idadeJogador;
         this.seleçãoJogador = seleçãoJogador;
@@ -47,7 +45,7 @@ public class Figurinhas {
 
     @Override
     public String toString() {
-        return "Nome = " + this.nomeJogador + ", Idade = " + this.idadeJogador + ", Seleção = "
+        return "Nome = " + this.nomeJogador + ", \tIdade = " + this.idadeJogador + ", \tSeleção = "
                 + this.seleçãoJogador ;
     }
     
