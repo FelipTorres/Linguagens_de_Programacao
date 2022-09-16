@@ -17,10 +17,10 @@ public class App {
     static List < Figurinha > listaFigurinhas = new ArrayList < Figurinha > ();
 
     public static void main(String[] args) throws InterruptedException, IOException{
-        // l.Console();
+        l.Console();
         String opcao = null;
-        // texto.boasVindas(coletarNomeUsuario());
-        // Thread.sleep(1500);
+        texto.boasVindas(coletarNomeUsuario());
+        Thread.sleep(1500);
 
         do {
             l.Console();
