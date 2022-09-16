@@ -1,4 +1,5 @@
-package br.com.figurinhas;
+package br.com.figurinhas.textos;
+
 
 public class TextosApp {
 

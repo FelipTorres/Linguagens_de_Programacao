@@ -1,4 +1,4 @@
-package br.com.figurinhas;
+package br.com.figurinhas.figurinha;
 
 public class Figurinhas {
     private String nomeJogador;

@@ -2,10 +2,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import br.com.figurinhas.Figurinhas;
-import br.com.figurinhas.TextosApp;
+import br.com.figurinhas.figurinha.Figurinhas;
+import br.com.figurinhas.limpaconsole.LimpaConsole;
+import br.com.figurinhas.textos.TextosApp;
 
 public class App {
+    static LimpaConsole l = new LimpaConsole();
     static Scanner ler = new Scanner(System.in);
     static TextosApp texto = new TextosApp();
     static Figurinhas figurinha = new Figurinhas();
