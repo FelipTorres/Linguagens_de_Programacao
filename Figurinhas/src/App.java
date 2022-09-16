@@ -56,7 +56,7 @@ public class App {
 
         idadeMedia = idade / (  listaFigurinhas.size());
 
-        System.out.println("A copa do mundo possui média de idade + " + idadeMedia + ".");
+        System.out.println("A copa do mundo possui média de idade " + idadeMedia + ".");
     }
 
     private static void mostrarFigurinhas() {
