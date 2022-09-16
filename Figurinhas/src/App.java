@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.lang.invoke.StringConcatFactory;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -16,10 +17,10 @@ public class App {
     static List < Figurinha > listaFigurinhas = new ArrayList < Figurinha > ();
 
     public static void main(String[] args) throws InterruptedException, IOException{
-        l.Console();
+        // l.Console();
         String opcao = null;
-        texto.boasVindas(coletarNomeUsuario());
-        Thread.sleep(1500);
+        // texto.boasVindas(coletarNomeUsuario());
+        // Thread.sleep(1500);
 
         do {
             l.Console();
@@ -127,6 +128,7 @@ public class App {
         ff = new Figurinha(nomeJogador, idadeJogador, selecaoJogador);
 
         l.Console();
+        teste(ff.getNomeJogador(), ff.getSeleçãoJogador());
         listaFigurinhas.add(ff);
 
         Thread.sleep(500);
@@ -138,6 +140,25 @@ public class App {
 
 
 
+    }
+
+    private static void teste(String nomeJogador, String seleçãoJogador) throws InterruptedException, IOException {
+        if(nomeJogador.equals("Marquinhos")){
+             mostraAlerta(texto.caseMarquinhos());
+        }else if (seleçãoJogador.equals("Argentina")) {
+             mostraAlerta(texto.caseArgentina());
+        } else if(nomeJogador.equals("Hulk")){
+             mostraAlerta(texto.caseHulk());
+        }
+        l.Console();
+    }
+
+    private static void mostraAlerta(String texto) throws InterruptedException, IOException {
+        for (int i = 0; i < 10; i++) {
+            System.out.println(texto);
+            Thread.sleep(300);
+            l.Console();
+        }
     }
 
     private static String coletarNomeUsuario() throws InterruptedException, IOException {

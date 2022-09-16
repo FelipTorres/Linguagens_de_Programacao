@@ -61,4 +61,17 @@ public class TextosApp {
         System.out.println("\n");
     }
 
+    public String caseMarquinhos(){
+            return "\t --------------------------------------------\n\t | Marquinhos vai levantar a taça do Hexa ! |\n\t --------------------------------------------";
+    }
+
+    public String caseArgentina(){
+        return"\t -------------------------\n\t | Adeus los hermanos!!! |\n\t -------------------------";
+    }
+
+    public String caseHulk(){
+        return "\t ------------------------------------\n\t | Dessa vez não vai dar para você! |\n\t ------------------------------------";
+
+    }
+
 }
