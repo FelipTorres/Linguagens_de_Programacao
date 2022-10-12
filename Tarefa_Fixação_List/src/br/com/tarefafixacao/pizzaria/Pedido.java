@@ -4,9 +4,10 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Pedido {
+
     private String numeroPedido;
     private Date data;
-    private Cliente cliente;
+    private Cliente cliente = new Cliente();
     private ArrayList<Pizza> listaPizza = new ArrayList<Pizza>();
 
     public double calcularValorPedido() {

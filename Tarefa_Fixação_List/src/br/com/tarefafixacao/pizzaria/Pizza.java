@@ -45,8 +45,8 @@ public class Pizza {
         return listaIngredientes.size();
     }
 
-    public void adicionarIngredientesPizza(Ingrediente ingrediente) {
-        listaIngredientes.add(ingrediente);
+    public void adicionarIngredientesPizza(String ingrediente) {
+        listaIngredientes.add(new Ingrediente(ingrediente));
     }
 
     public Double calcularPrecoPizza() {
@@ -72,6 +72,14 @@ public class Pizza {
     setValor(valorPizza);
 
         return getValor();
+    }
+
+    public ArrayList<Ingrediente> getListaIngredientes() {
+        return listaIngredientes;
+    }
+
+    public void setListaIngredientes(ArrayList<Ingrediente> listaIngredientes) {
+        this.listaIngredientes = listaIngredientes;
     }
 
 }
