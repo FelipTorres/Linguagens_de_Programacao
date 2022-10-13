@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 
 public class Pizzaria {
     public static void main(String[] args) {
-        Pizza pizzaEscolha= new Pizza();
+        Pizza pizzaEscolha = new Pizza();
         Random aleatorio = new Random();
 
         Pedido pedido1 = new Pedido();
@@ -18,14 +18,49 @@ public class Pizzaria {
         pedido1.getCliente().setNome(JOptionPane.showInputDialog(null, "Informe o seu nome:"));
 
         do {
+
+            // Setar tamanho da pizza
+
+            boolean semTanhoSelecionado = pizzaEscolha.getTamanho() == null;
+
+            System.out.println(pizzaEscolha.getTamanho() == null);
+            
+            if (semTanhoSelecionado) {
+
+                do {
+                    opcaoMenuPrincipal = JOptionPane.showInputDialog(null,
+                            "Selecione o Tamanho da Pizza : \n1. P\n2. M\n3. G");
+                            System.out.println("A escolha foi "+ opcaoMenuPrincipal);
+
+                            if(opcaoMenuPrincipal.equals("1")){
+                                pizzaEscolha.setTamanho("P");
+                                semTanhoSelecionado = false;
+                            }
+
+                            if(opcaoMenuPrincipal.equals("2")){
+                                pizzaEscolha.setTamanho("M");
+                                semTanhoSelecionado = false;
+                            }
+
+                            if(opcaoMenuPrincipal.equals("3")){
+                                pizzaEscolha.setTamanho("G");
+                                semTanhoSelecionado = false;
+                            }
+                            System.out.println(pizzaEscolha.getTamanho());
+
+                } while (semTanhoSelecionado);
+
+                // Fim Setar tamanho da pizza
+
+            }
             opcaoMenuPrincipal = JOptionPane.showInputDialog(null,
                     "Digite o número do Ingrediente da pizza\n1.	Mussarela\n2.	Bacon\n3.	Presunto\n4.	Frango\n5.	Requeijão\n6.	Possui borda\n7.	Deseja outra pizza?\n8.	Finalizar");
 
-                    switch (opcaoMenuPrincipal) {
+            switch (opcaoMenuPrincipal) {
                 // 1. Mussarela
                 case "1":
                     pizzaEscolha.adicionarIngredientesPizza("Mussarela");
-                break;
+                    break;
                 // 2. Bacon
                 case "2":
                     pizzaEscolha.adicionarIngredientesPizza("Bacon");
@@ -45,10 +80,11 @@ public class Pizzaria {
                 // 6. Possui borda
                 case "6":
 
-                        int escolhaBorda = JOptionPane.showConfirmDialog(null, "Gostaria de borda recheada ? ?", "Borda Recheada", 0);
+                    int escolhaBorda = JOptionPane.showConfirmDialog(null, "Gostaria de borda recheada ? ?",
+                            "Borda Recheada", 0);
 
-                         pizzaEscolha.setPossuiBordaRecheada(escolhaBorda == 0 ? true : false);
-                        break;
+                    pizzaEscolha.setPossuiBordaRecheada(escolhaBorda == 0 ? true : false);
+                    break;
                 // 7. Deseja outra pizza?
                 case "7":
                     pedido1.getListaPizza().add(pizzaEscolha);
