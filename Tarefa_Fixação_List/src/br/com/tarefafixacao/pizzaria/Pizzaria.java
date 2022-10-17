@@ -60,28 +60,34 @@ public class Pizzaria {
                 // 1. Mussarela
                 case "1":
                     pizzaEscolha.adicionarIngredientesPizza("Mussarela");
+                    JOptionPane.showMessageDialog(null, "Ingrediente adicionado !", "Pizzaria Casa Nostra", 0);
+                    
                     break;
                 // 2. Bacon
                 case "2":
                     pizzaEscolha.adicionarIngredientesPizza("Bacon");
+                    JOptionPane.showMessageDialog(null, "Ingrediente adicionado !", "Pizzaria Casa Nostra", 0);
                     break;
                 // 3. Presunto
                 case "3":
                     pizzaEscolha.adicionarIngredientesPizza("Presunto");
+                    JOptionPane.showMessageDialog(null, "Ingrediente adicionado !", "Pizzaria Casa Nostra", 0);
                     break;
                 // 4. Frango
                 case "4":
                     pizzaEscolha.adicionarIngredientesPizza("Frango");
+                    JOptionPane.showMessageDialog(null, "Ingrediente adicionado !", "Pizzaria Casa Nostra", 0);
                     break;
                 // 5. Requeijão
                 case "5":
                     pizzaEscolha.adicionarIngredientesPizza("Requeijão");
+                    JOptionPane.showMessageDialog(null, "Ingrediente adicionado !", "Pizzaria Casa Nostra", 0);
+
                     break;
                 // 6. Possui borda
                 case "6":
 
-                    int escolhaBorda = JOptionPane.showConfirmDialog(null, "Gostaria de borda recheada ? ?",
-                            "Borda Recheada", 0);
+                    int escolhaBorda = JOptionPane.showConfirmDialog(null, "Gostaria de borda recheada ? ?","Borda Recheada", 0);
 
                     pizzaEscolha.setPossuiBordaRecheada(escolhaBorda == 0 ? true : false);
                     break;
