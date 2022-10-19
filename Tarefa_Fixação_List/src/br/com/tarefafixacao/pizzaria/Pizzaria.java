@@ -23,14 +23,11 @@ public class Pizzaria {
 
             boolean semTanhoSelecionado = pizzaEscolha.getTamanho() == null;
 
-            System.out.println(pizzaEscolha.getTamanho() == null);
-            
             if (semTanhoSelecionado) {
 
                 do {
                     opcaoMenuPrincipal = JOptionPane.showInputDialog(null,
                             "Selecione o Tamanho da Pizza : \n1. P\n2. M\n3. G");
-                            System.out.println("A escolha foi "+ opcaoMenuPrincipal);
 
                             if(opcaoMenuPrincipal.equals("1")){
                                 pizzaEscolha.setTamanho("P");
@@ -46,7 +43,6 @@ public class Pizzaria {
                                 pizzaEscolha.setTamanho("G");
                                 semTanhoSelecionado = false;
                             }
-                            System.out.println(pizzaEscolha.getTamanho());
 
                 } while (semTanhoSelecionado);
 

@@ -22,13 +22,13 @@ public class Pedido {
     }
 
     public String imprimePedido (){
-        return ("Pedido: "+getNumeroPedido()+"\nCliente: "+getCliente().getNome()+"\nQuantidade de Pizzas: " + getListaPizza().size() + "\nValor Total do Pedido:" + calcularValorPedido());
+        return ("Pedido: "+getNumeroPedido()+"\nCliente: "+getCliente().getNome()+"\nQuantidade de Pizzas: " + getListaPizza().size() + "\nValor Total do Pedido: R$" + calcularValorPedido());
     }
 
     public String getNumeroPedido() {
         return numeroPedido;
     }
-
+    
     public void setNumeroPedido(String numeroPedido) {
         this.numeroPedido = numeroPedido;
     }
