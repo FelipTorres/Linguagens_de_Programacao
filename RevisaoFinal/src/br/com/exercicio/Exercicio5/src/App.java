@@ -23,15 +23,22 @@ public class App {
         String opcao = "";
         do {
 
-            opcao = JOptionPane.showInputDialog(textoMenuInicial(cozinhas));
+            opcao = JOptionPane.showInputDialog(null,textoMenuInicial(cozinhas),"Menu Inicial",1);
+            
 
-            if (Integer.parseInt(opcao) <= cozinhas.size()) {
+
+            System.out.println(Integer.parseInt(opcao));
+            if ( Integer.parseInt(opcao) <= cozinhas.size()) {
+                System.out.println("To aqui dentro");
                 meuPedido = new Pedido(cozinhas.get(Integer.parseInt(opcao)));
 
                 do {
                     opcao = JOptionPane.showInputDialog(textoMenuEscolherPratos(meuPedido.getPratos()));
+                    meuPedido.setPratosEscolhidos(meuPedido.getPratos().get(Integer.parseInt(opcao)));
                 } while (!opcao.equalsIgnoreCase("N"));
             }
+            
+
 
         } while (!opcao.equalsIgnoreCase("N"));
 
@@ -41,8 +48,7 @@ public class App {
 
         String texto = "Selecione os pratos desejados \n";
         for (int i = 0; i < pratos.size(); i++) {
-            texto += "\t " + i + " - " + pratos.get(i).getNome() + " \t R$ " + pratos.get(i).getValor();
-
+            texto += "\t " + i + " - " + pratos.get(i).getNome() + " \t R$ " + pratos.get(i).getValor() + "\n";
         }
         texto += "\t N - Sair";
         return texto;

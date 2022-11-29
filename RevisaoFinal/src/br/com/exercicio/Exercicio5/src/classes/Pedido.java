@@ -9,6 +9,13 @@ public class Pedido  extends Cozinha{
     ArrayList<Prato> pratosEscolhidos;
     
     
+    public void setPratosEscolhidos(Prato pratosEscolhido) {
+        this.pratosEscolhidos.add(pratosEscolhido);
+    }
+
+
+
+
     public Pedido(String tipo, ArrayList<Prato> pratos) {
         super(tipo, pratos);
         pratosEscolhidos = new ArrayList<>(pratos);
