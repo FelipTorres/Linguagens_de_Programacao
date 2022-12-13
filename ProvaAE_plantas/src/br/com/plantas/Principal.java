@@ -1,4 +1,4 @@
-package br.com.serializacao.exercicio;
+package br.com.plantas;
 
 import java.io.IOException;
 import java.util.ArrayList;
